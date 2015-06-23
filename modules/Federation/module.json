@@ -1,0 +1,15 @@
+{
+    "name": "Federation",
+    "alias": "federation",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "App\\Modules\\Federation\\Providers\\FederationServiceProvider"
+    ],
+    "aliases":{},
+    "files": [
+        "start.php"
+    ]
+}
