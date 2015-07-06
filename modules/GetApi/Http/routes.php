@@ -1,6 +1,6 @@
 <?php
 
-Route::group(['middleware' => 'cors', 'prefix' => 'api', 'namespace' => '\\Modules\GetApi\Http\Controllers'], function()
+Route::group(['middleware' => 'cors', 'prefix' => 'api/v1', 'namespace' => '\\Modules\GetApi\Http\Controllers'], function()
 {
 	Route::get('/get/trips/{id?}', 'ApiController@gettrips');
 	Route::post('/addtrip', 'ApiController@posttrip');

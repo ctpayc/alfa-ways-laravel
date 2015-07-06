@@ -1,6 +1,8 @@
 <?php namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\View;
+use Carbon\Carbon;
+
 class WelcomeController extends Controller {
 
 	/*
@@ -31,7 +33,18 @@ class WelcomeController extends Controller {
 	 */
 	public function index()
 	{
-		return View::make('welcome');
+
+		// $mytime = Carbon\Carbon::now();
+		// echo $mytime->toDateTimeString();
+
+		$departure = new Carbon('Wed Jul 15 2015 15:00:00 GMT+0700 (KRAT)');
+		echo $departure;
+
+		$data = [
+			'content' => 'date'
+		];
+
+		return view('welcome', $data);
 	}
 
 }

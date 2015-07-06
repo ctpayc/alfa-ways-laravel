@@ -6,5 +6,5 @@
 @endsection
 
 @section('content')
-
+	{{ $content or 'default $content' }}
 @endsection
