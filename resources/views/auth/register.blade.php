@@ -36,6 +36,20 @@
 						</div>
 
 						<div class="form-group">
+							<label class="col-md-4 control-label">post</label>
+							<div class="col-md-6">
+								<input type="text" class="form-control" name="post" value="{{ old('post') }}">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-md-4 control-label">place</label>
+							<div class="col-md-6">
+								<input type="text" class="form-control" name="place" value="{{ old('place') }}">
+							</div>
+						</div>
+
+						<div class="form-group">
 							<label class="col-md-4 control-label">Password</label>
 							<div class="col-md-6">
 								<input type="password" class="form-control" name="password">

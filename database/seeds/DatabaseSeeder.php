@@ -35,13 +35,24 @@ class UserTableSeeder extends Seeder {
 	{
 		DB::table('users')->delete();
 
-		for ($i=1; $i < 4; $i++) { 
+		$testusers = [
+			[ 'id' => 1, 'name' => 'Иванов Антон Дмитриевич',  'post' => 'старший инженер',  'email' => 'adivanov@alfabank.ru',    'place' => 'ОО Кемеровский' ],
+			[ 'id' => 2, 'name' => 'Ланин Максим Юрьевич',     'post' => 'ведущий инженер',  'email' => 'mlanin@alfabank.ru',      'place' => 'ОО Омский' ],
+			[ 'id' => 3, 'name' => 'Осокин Роман Сергеевич',   'post' => 'инженер',          'email' => 'rosokin@alfabank.ru',     'place' => 'ОО Томский' ],
+			[ 'id' => 4, 'name' => 'Чунрев Роман Викторович',  'post' => 'инженер',          'email' => 'rchunarev@alfabank.ru',   'place' => 'ОО Челяба' ],
+			[ 'id' => 5, 'name' => 'Киприянов Павел Игоревич', 'post' => 'начальник отдела', 'email' => 'pkipriyanov@alfabank.ru', 'place' => 'ОО Кемеровский' ]
+		];
+		$i = 0;
+		foreach ($testusers as $user) {
 			User::create([
-				'id' => $i,
-				'name' => 'user'.$i,
-				'email' => 'user'.$i.'@mail.ru',
+				'id'       => $user['id'],
+				'name'     => $user['name'],
+				'email'    => $user['email'],
+				'post'     => $user['post'],
+				'place'    => $user['place'],
 				'password' => Hash::make('Qwer1234')
 			]);
+			$i++;
 		}
 	}
 

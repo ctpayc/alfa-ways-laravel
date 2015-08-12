@@ -154,6 +154,8 @@ return [
 
 		'Barryvdh\Cors\ServiceProvider',
 
+		'Tymon\JWTAuth\Providers\JWTAuthServiceProvider',
+
 	],
 
 	/*
@@ -207,6 +209,8 @@ return [
 		'Html'      => 'Illuminate\Html\HtmlFacade',
 		'Form'      => 'Illuminate\Html\FormFacade',
 		'Module'    => 'Pingpong\Modules\Facades\Module',
+		'JWTAuth'   => 'Tymon\JWTAuth\Facades\JWTAuth',
+		'JWTFactory' => 'Tymon\JWTAuth\Facades\JWTFactory'
 	],
 
 ];

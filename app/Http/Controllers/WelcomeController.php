@@ -37,7 +37,9 @@ class WelcomeController extends Controller {
 		// $mytime = Carbon\Carbon::now();
 		// echo $mytime->toDateTimeString();
 
-		$departure = new Carbon('Wed Jul 15 2015 15:00:00 GMT+0700 (KRAT)');
+		$x = 'Thu Aug 13 2015';
+		$y = '02:00:00 GMT+0700 (KRAT)';
+		$departure = new Carbon($x.$y);
 		echo $departure;
 
 		$data = [
